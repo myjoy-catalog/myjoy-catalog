@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYJOY 美谊联 · Joysports 悦动空间 | 在线画册</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header" id="siteHeader">
+  <div class="header-inner">
+    <a class="logo" href="#top" aria-label="首页">
+      <img class="logo-img" src="logo-meijoy.png" alt="MYJOY">
+      <span class="logo-text">
+        <strong data-i18n="brand.group">美谊联集团</strong>
+        <small data-i18n="brand.groupEn">MYJOY · JOYSPORTS GROUP</small>
+      </span>
+    </a>
+    <nav class="main-nav" id="mainNav">
+      <a href="#gallery" data-i18n="nav.gallery">产品画册</a>
+      <a href="#meilian" data-i18n="nav.meilian">美谊联</a>
+      <a href="#joy" data-i18n="nav.joy">悦动空间</a>
+      <a href="#overview" data-i18n="nav.overview">集团概览</a>
+      <a href="#contact" data-i18n="nav.contact">联系我们</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-toggle" role="group" aria-label="语言切换">
+        <button class="lang-btn active" data-lang="zh">中</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline webkit-playsinline x5-playsinline x5-video-player-type="h5" x5-video-player-fullscreen="false" poster="hero-poster.jpg" preload="auto" aria-hidden="true">
+      <source src="hero-video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-fallback" id="heroFallback" aria-hidden="true"></div>
+    <div class="hero-video-mask"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="eyebrow"><span class="dot"></span><span data-i18n="hero.eyebrow">19 年游乐行业深耕 · 广州</span></div>
+        <h1 data-i18n="hero.title">电玩设备、数字潮玩运动设备<br>一站式供应商</h1>
+        <p class="hero-sub" data-i18n="hero.sub">电玩游艺 · 潮玩 · 数字运动设备研发生产与整场规划运营服务</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#gallery" data-i18n="hero.cta1">浏览产品画册</a>
+          <a class="btn btn-ghost" href="#overview" data-i18n="hero.cta2">了解我们</a>
+        </div>
+        <div class="hero-brands">
+          <button class="brand-chip chip-meilian" data-goto="meilian">
+            <strong data-i18n="hero.brand1">美谊联</strong><span data-i18n="hero.brand1sub">电玩游艺设备</span>
+          </button>
+          <button class="brand-chip chip-joy" data-goto="joy">
+            <strong data-i18n="hero.brand2">悦动空间</strong><span data-i18n="hero.brand2sub">潮玩 · 数字运动</span>
+          </button>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="hero-stats" id="heroStats"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS STRIP — 手机端数字条（从 banner 移出，桌面端隐藏） -->
+  <section class="stats-strip" aria-label="企业实力数据">
+    <div class="wrap">
+      <div class="hero-stats" id="heroStatsBelow"></div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section section-light" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker" data-i18n="gallery.kicker">PRODUCT CATALOG</div>
+          <h2 data-i18n="gallery.title">产品画册</h2>
+        </div>
+        <p class="section-lead" data-i18n="gallery.lead">产品分为电玩游艺设备与潮玩数字设备两大系列，每个系列下再按细分类别浏览；自主研发设备双系列均可查看。</p>
+      </div>
+      <div class="featured" id="featuredSection">
+        <div class="featured-head">
+          <div>
+            <div class="featured-kicker" data-i18n="featured.kicker">FEATURED EQUIPMENT</div>
+            <h3 data-i18n="featured.title">精选设备</h3>
+          </div>
+          <p data-i18n="featured.lead">自主研发热门机型，人气口碑之选。</p>
+        </div>
+        <div class="fc-stage">
+          <button class="fc-arrow fc-prev" id="fcPrev" aria-label="Previous">
+            <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          <div class="featured-track" id="featuredTrack"></div>
+          <button class="fc-arrow fc-next" id="fcNext" aria-label="Next">
+            <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+        <div class="fc-dots" id="fcDots"></div>
+      </div>
+      <div class="group-tabs" id="groupTabs" role="tablist" aria-label="产品大类"></div>
+      <div class="subcat-wrap" id="subcatWrap">
+        <span class="subcat-label" data-i18n="gallery.subcatLabel">细分类别</span>
+        <div class="filter-bar" id="subcatBar"></div>
+      </div>
+      <div class="leaf-wrap" id="leafWrap" hidden>
+        <span class="leaf-label"><span class="leaf-branch">└</span> <span data-i18n="gallery.leafLabel">具体机型</span></span>
+        <div class="filter-bar" id="leafBar"></div>
+      </div>
+      <div class="gallery-grid" id="galleryGrid"></div>
+    </div>
+  </section>
+
+  <!-- MYJOY BRAND -->
+  <section class="brand-section brand-a" id="meilian">
+    <div class="wrap">
+      <div class="brand-hero">
+        <div class="brand-hero-copy">
+          <img class="brand-logo brand-logo-meijoy" src="logo-meijoy.png" alt="MYJOY">
+          <div class="kicker" data-i18n="meilian.kicker">BRAND 01 · 电玩游艺</div>
+          <h2>美谊联 <span class="brand-en">MYJOY</span></h2>
+          <p class="brand-desc" data-i18n="meilian.desc">美谊联专注电玩游艺设备的研发、生产与销售。近二十年来坚持"守信、求进、务实、利他"的经营理念，产品远销日本、美国、意大利、西班牙、圭亚那及东南亚等三十多个国家和地区，与国内两千多家综合游乐场、潮玩运动馆建立了长期合作关系。</p>
+          <div class="value-tags" id="meilianValues"></div>
+        </div>
+        <div class="brand-hero-visual visual-a">
+          <div class="visual-grid"></div>
+          <div class="visual-label"><span data-i18n="meilian.visualLabel">电玩游艺设备系列</span></div>
+        </div>
+      </div>
+      <div class="feature-row" id="meilianFeatures"></div>
+    </div>
+  </section>
+
+  <!-- JOY BRAND -->
+  <section class="brand-section brand-b" id="joy">
+    <div class="wrap">
+      <div class="brand-hero reverse">
+        <div class="brand-hero-copy">
+          <img class="brand-logo brand-logo-joy" src="logo-joysports.png" alt="Joysports">
+          <div class="kicker" data-i18n="joy.kicker">BRAND 02 · 潮玩与数字运动</div>
+          <h2>悦动空间 <span class="brand-en">JOYSPORTS</span></h2>
+          <p class="brand-desc" data-i18n="joy.desc">广州悦动空间数字技术有限公司专注数字体育与趣味竞技运动设备的研发、生产、销售与服务，拥有多项全球领先的室内数字运动产品核心技术，开发了赛马、数字足球、数字射箭、数字射击、网球、模拟高尔夫等多种数字运动设备。</p>
+          <div class="value-tags" id="joyValues"></div>
+        </div>
+        <div class="brand-hero-visual visual-b">
+          <div class="visual-grid"></div>
+          <div class="visual-label"><span data-i18n="joy.visualLabel">数字运动设备系列</span></div>
+        </div>
+      </div>
+      <div class="feature-row" id="joyFeatures"></div>
+
+      <div class="stores">
+        <div class="stores-head">
+          <div class="kicker" data-i18n="stores.kicker">DIRECT STORES</div>
+          <h3 data-i18n="stores.title">线下直营品牌门店 · DEDE APU 潮玩运动聚乐部</h3>
+          <p data-i18n="stores.desc">直接面对用户，洞察 C 端需求，持续反向驱动产品优化。</p>
+        </div>
+        <div class="stores-grid" id="storesGrid"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OVERVIEW -->
+  <section class="section section-light" id="overview">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="kicker" data-i18n="overview.kicker">ABOUT US</div>
+          <h2 data-i18n="overview.title">集团概览</h2>
+        </div>
+        <p class="section-lead" data-i18n="overview.lead">始创于 2007 年，从美联科技到美谊联集团，近二十年立足动漫游乐行业，稳步成长为综合性游乐设备厂家与整场规划运营服务机构。</p>
+      </div>
+      <div class="overview-grid" id="overviewGrid"></div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section-contact" id="contact">
+    <div class="wrap contact-inner">
+      <div>
+        <div class="kicker" data-i18n="contact.kicker">GET IN TOUCH</div>
+        <h2 data-i18n="contact.title">期待与您合作</h2>
+        <p data-i18n="contact.desc">广州美谊联动漫科技有限公司 · 广州悦动空间数字技术有限公司<br>国家高新技术企业 · 8000㎡ 生产车间 · 3000㎡ 产品展示体验厅</p>
+      </div>
+      <div class="contact-actions">
+        <a class="btn btn-primary" href="#top" data-i18n="contact.back">返回顶部</a>
+      </div>
+    </div>
+  </section>
+
+
+</main>
+
+<!-- PRODUCT DETAIL PAGE -->
+<div class="pd-backdrop" id="pdBackdrop" hidden>
+  <div class="pd-modal" role="dialog" aria-modal="true" aria-labelledby="pdTitle">
+    <div class="pd-topbar">
+      <button class="pd-back" id="pdBack"><span class="pd-back-arrow">&larr;</span><span data-i18n="pd.back">返回画册</span></button>
+      <span class="pd-topbar-title" id="pdTitleBar"></span>
+      <button class="pd-close" id="pdClose" aria-label="Close">&times;</button>
+    </div>
+    <div class="pd-content">
+    <div class="pd-media">
+      <div class="pd-main-img" id="pdMainImg">
+        <img id="pdMainPhoto" alt="" src="">
+        <span class="pd-counter" id="pdCounter">1 / 3</span>
+      </div>
+      <div class="pd-thumbs" id="pdThumbs"></div>
+      <div class="pd-media-note" data-i18n="pd.mediaNote"></div>
+    </div>
+    <div class="pd-info">
+      <div class="pd-tags">
+        <span class="pd-brand" id="pdBrand"></span>
+        <span class="pd-cat" id="pdCat"></span>
+      </div>
+      <h3 id="pdTitle"></h3>
+      <p class="pd-desc" id="pdDesc"></p>
+      <div class="pd-highlights" id="pdHighlights"></div>
+      <h4 class="pd-spec-title" data-i18n="pd.specTitle"></h4>
+      <dl class="pd-specs" id="pdSpecs"></dl>
+      <div class="pd-actions">
+        <a class="btn btn-primary" href="#contact" id="pdInquire"></a>
+      </div>
+      <div class="pd-related">
+        <div class="pd-related-title" data-i18n="pd.related"></div>
+        <div class="pd-related-list" id="pdRelated"></div>
+      </div>
+      <p class="pd-note" data-i18n="pd.note"></p>
+    </div>
+    </div>
+  </div>
+</div>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span data-i18n="footer.copy">© 2026 美谊联集团 · 悦动空间 · 在线产品画册</span>
+    <span class="footer-links"><a href="#overview" data-i18n="footer.about">关于我们</a><a href="#gallery" data-i18n="footer.products">产品画册</a></span>
+  </div>
+</footer>
+
+<script src="catalog-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
