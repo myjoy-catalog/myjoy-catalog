@@ -19,6 +19,7 @@ const I18N = {
     "sub.shoot":"投篮竞技","sub.throw":"投掷竞技","sub.race":"模拟赛马","sub.golf":"模拟高尔夫","sub.archery":"数字射箭",
     "empty.title":"该产品系列正在持续更新","empty.desc":"更多新品即将上线，欢迎联系我们获取完整产品资料与整场方案。","empty.cta":"咨询我们","gallery.subcatLabel":"细分类别","gallery.leafLabel":"具体机型",
     "leaf.horse":"赛马类","leaf.throw":"投掷类","leaf.basket":"投篮机","leaf.hockey":"曲棍球","leaf.boxing":"拳击类","leaf.dart":"飞镖机","leaf.hammer":"敲锤类","leaf.other":"其他产品",
+    "leaf.island":"中岛礼品机","leaf.claw":"抓娃娃机","leaf.grabber":"夹子机","leaf.otherGift":"其他礼品机",
     "stat.years":"行业深耕","stat.partners":"合作伙伴","stat.countries":"出口国家地区","stat.workshop":"生产车间","stat.hall":"展示体验厅","stat.team":"专业团队",
     "meV1":"守信","meV2":"求进","meV3":"务实","meV4":"利他",
     "mf1":"产品远销 30+ 国家","mf1s":"日本 / 美国 / 意大利 / 西班牙等","mf2":"2000+ 合作客户","mf2s":"综合游乐场与潮玩运动馆","mf3":"8000㎡ 生产车间","mf3s":"高效自主生产能力","mf4":"19 年行业经验","mf4s":"国家高新技术企业",
@@ -57,6 +58,7 @@ const I18N = {
     "sub.shoot":"Basketball shooting","sub.throw":"Throwing","sub.race":"Horse racing","sub.golf":"Sim golf","sub.archery":"Digital archery",
     "empty.title":"More products coming soon","empty.desc":"New models are on the way. Contact us for the full catalog and venue solutions.","empty.cta":"Contact us","gallery.subcatLabel":"Subcategories","gallery.leafLabel":"Machine types",
     "leaf.horse":"Horse racing","leaf.throw":"Throwing","leaf.basket":"Basketball shooter","leaf.hockey":"Air hockey","leaf.boxing":"Boxing","leaf.dart":"Dart machine","leaf.hammer":"Hammer game","leaf.other":"Others",
+    "leaf.island":"Island prize machine","leaf.claw":"Claw machine","leaf.grabber":"Grabber machine","leaf.otherGift":"Other prize machines",
     "stat.years":"Years in industry","stat.partners":"Partners","stat.countries":"Countries & regions","stat.workshop":"Production workshop","stat.hall":"Showroom","stat.team":"Professionals",
     "meV1":"Integrity","meV2":"Progress","meV3":"Pragmatism","meV4":"Altruism",
     "mf1":"30+ export countries","mf1s":"Japan / US / Italy / Spain","mf2":"2,000+ partners","mf2s":"Amusement & trendy sports venues","mf3":"8,000㎡ workshop","mf3s":"Efficient in-house production","mf4":"19 years of experience","mf4s":"National high-tech enterprise",
@@ -134,6 +136,12 @@ const LEAFCATS={
     {id:'arcade:act:dart',  name:'leaf.dart'},
     {id:'arcade:act:hammer',name:'leaf.hammer'},
     {id:'arcade:act:other', name:'leaf.other'}
+  ],
+  'arcade:gift':[
+    {id:'arcade:gift:island', name:'leaf.island'},
+    {id:'arcade:gift:claw',   name:'leaf.claw'},
+    {id:'arcade:gift:grabber',name:'leaf.grabber'},
+    {id:'arcade:gift:otherGift',name:'leaf.otherGift'}
   ]
 };
 /* 产品数据来自 catalog-data.js（由「产品管理.html」导出）。
